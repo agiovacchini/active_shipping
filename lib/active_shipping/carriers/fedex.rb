@@ -14,86 +14,86 @@ module ActiveShipping
     LIVE_URL = 'https://gateway.fedex.com:443/xml'
 
     CARRIER_CODES = {
-      "fedex_ground" => "FDXG",
-      "fedex_express" => "FDXE"
+        "fedex_ground" => "FDXG",
+        "fedex_express" => "FDXE"
     }
 
     DELIVERY_ADDRESS_NODE_NAMES = %w(DestinationAddress ActualDeliveryAddress)
     SHIPPER_ADDRESS_NODE_NAMES  = %w(ShipperAddress)
 
     SERVICE_TYPES = {
-      "PRIORITY_OVERNIGHT" => "FedEx Priority Overnight",
-      "PRIORITY_OVERNIGHT_SATURDAY_DELIVERY" => "FedEx Priority Overnight Saturday Delivery",
-      "FEDEX_2_DAY" => "FedEx 2 Day",
-      "FEDEX_2_DAY_SATURDAY_DELIVERY" => "FedEx 2 Day Saturday Delivery",
-      "STANDARD_OVERNIGHT" => "FedEx Standard Overnight",
-      "FIRST_OVERNIGHT" => "FedEx First Overnight",
-      "FIRST_OVERNIGHT_SATURDAY_DELIVERY" => "FedEx First Overnight Saturday Delivery",
-      "FEDEX_EXPRESS_SAVER" => "FedEx Express Saver",
-      "FEDEX_1_DAY_FREIGHT" => "FedEx 1 Day Freight",
-      "FEDEX_1_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 1 Day Freight Saturday Delivery",
-      "FEDEX_2_DAY_FREIGHT" => "FedEx 2 Day Freight",
-      "FEDEX_2_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 2 Day Freight Saturday Delivery",
-      "FEDEX_3_DAY_FREIGHT" => "FedEx 3 Day Freight",
-      "FEDEX_3_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 3 Day Freight Saturday Delivery",
-      "INTERNATIONAL_PRIORITY" => "FedEx International Priority",
-      "INTERNATIONAL_PRIORITY_SATURDAY_DELIVERY" => "FedEx International Priority Saturday Delivery",
-      "INTERNATIONAL_ECONOMY" => "FedEx International Economy",
-      "INTERNATIONAL_FIRST" => "FedEx International First",
-      "INTERNATIONAL_PRIORITY_FREIGHT" => "FedEx International Priority Freight",
-      "INTERNATIONAL_ECONOMY_FREIGHT" => "FedEx International Economy Freight",
-      "GROUND_HOME_DELIVERY" => "FedEx Ground Home Delivery",
-      "FEDEX_GROUND" => "FedEx Ground",
-      "INTERNATIONAL_GROUND" => "FedEx International Ground",
-      "SMART_POST" => "FedEx SmartPost",
-      "FEDEX_FREIGHT_PRIORITY" => "FedEx Freight Priority",
-      "FEDEX_FREIGHT_ECONOMY" => "FedEx Freight Economy"
+        "PRIORITY_OVERNIGHT" => "FedEx Priority Overnight",
+        "PRIORITY_OVERNIGHT_SATURDAY_DELIVERY" => "FedEx Priority Overnight Saturday Delivery",
+        "FEDEX_2_DAY" => "FedEx 2 Day",
+        "FEDEX_2_DAY_SATURDAY_DELIVERY" => "FedEx 2 Day Saturday Delivery",
+        "STANDARD_OVERNIGHT" => "FedEx Standard Overnight",
+        "FIRST_OVERNIGHT" => "FedEx First Overnight",
+        "FIRST_OVERNIGHT_SATURDAY_DELIVERY" => "FedEx First Overnight Saturday Delivery",
+        "FEDEX_EXPRESS_SAVER" => "FedEx Express Saver",
+        "FEDEX_1_DAY_FREIGHT" => "FedEx 1 Day Freight",
+        "FEDEX_1_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 1 Day Freight Saturday Delivery",
+        "FEDEX_2_DAY_FREIGHT" => "FedEx 2 Day Freight",
+        "FEDEX_2_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 2 Day Freight Saturday Delivery",
+        "FEDEX_3_DAY_FREIGHT" => "FedEx 3 Day Freight",
+        "FEDEX_3_DAY_FREIGHT_SATURDAY_DELIVERY" => "FedEx 3 Day Freight Saturday Delivery",
+        "INTERNATIONAL_PRIORITY" => "FedEx International Priority",
+        "INTERNATIONAL_PRIORITY_SATURDAY_DELIVERY" => "FedEx International Priority Saturday Delivery",
+        "INTERNATIONAL_ECONOMY" => "FedEx International Economy",
+        "INTERNATIONAL_FIRST" => "FedEx International First",
+        "INTERNATIONAL_PRIORITY_FREIGHT" => "FedEx International Priority Freight",
+        "INTERNATIONAL_ECONOMY_FREIGHT" => "FedEx International Economy Freight",
+        "GROUND_HOME_DELIVERY" => "FedEx Ground Home Delivery",
+        "FEDEX_GROUND" => "FedEx Ground",
+        "INTERNATIONAL_GROUND" => "FedEx International Ground",
+        "SMART_POST" => "FedEx SmartPost",
+        "FEDEX_FREIGHT_PRIORITY" => "FedEx Freight Priority",
+        "FEDEX_FREIGHT_ECONOMY" => "FedEx Freight Economy"
     }
 
     PACKAGE_TYPES = {
-      "fedex_envelope" => "FEDEX_ENVELOPE",
-      "fedex_pak" => "FEDEX_PAK",
-      "fedex_box" => "FEDEX_BOX",
-      "fedex_tube" => "FEDEX_TUBE",
-      "fedex_10_kg_box" => "FEDEX_10KG_BOX",
-      "fedex_25_kg_box" => "FEDEX_25KG_BOX",
-      "your_packaging" => "YOUR_PACKAGING"
+        "fedex_envelope" => "FEDEX_ENVELOPE",
+        "fedex_pak" => "FEDEX_PAK",
+        "fedex_box" => "FEDEX_BOX",
+        "fedex_tube" => "FEDEX_TUBE",
+        "fedex_10_kg_box" => "FEDEX_10KG_BOX",
+        "fedex_25_kg_box" => "FEDEX_25KG_BOX",
+        "your_packaging" => "YOUR_PACKAGING"
     }
 
     DROPOFF_TYPES = {
-      'regular_pickup' => 'REGULAR_PICKUP',
-      'request_courier' => 'REQUEST_COURIER',
-      'dropbox' => 'DROP_BOX',
-      'business_service_center' => 'BUSINESS_SERVICE_CENTER',
-      'station' => 'STATION'
+        'regular_pickup' => 'REGULAR_PICKUP',
+        'request_courier' => 'REQUEST_COURIER',
+        'dropbox' => 'DROP_BOX',
+        'business_service_center' => 'BUSINESS_SERVICE_CENTER',
+        'station' => 'STATION'
     }
 
     SIGNATURE_OPTION_CODES = {
-      adult: 'ADULT', # 21 years plus
-      direct: 'DIRECT', # A person at the delivery address
-      indirect: 'INDIRECT', # A person at the delivery address, or a neighbor, or a signed note for fedex on the door
-      none_required: 'NO_SIGNATURE_REQUIRED',
-      default_for_service: 'SERVICE_DEFAULT'
+        adult: 'ADULT', # 21 years plus
+        direct: 'DIRECT', # A person at the delivery address
+        indirect: 'INDIRECT', # A person at the delivery address, or a neighbor, or a signed note for fedex on the door
+        none_required: 'NO_SIGNATURE_REQUIRED',
+        default_for_service: 'SERVICE_DEFAULT'
     }
 
     PAYMENT_TYPES = {
-      'sender' => 'SENDER',
-      'recipient' => 'RECIPIENT',
-      'third_party' => 'THIRDPARTY',
-      'collect' => 'COLLECT'
+        'sender' => 'SENDER',
+        'recipient' => 'RECIPIENT',
+        'third_party' => 'THIRDPARTY',
+        'collect' => 'COLLECT'
     }
 
     PACKAGE_IDENTIFIER_TYPES = {
-      'tracking_number' => 'TRACKING_NUMBER_OR_DOORTAG',
-      'door_tag' => 'TRACKING_NUMBER_OR_DOORTAG',
-      'rma' => 'RMA',
-      'ground_shipment_id' => 'GROUND_SHIPMENT_ID',
-      'ground_invoice_number' => 'GROUND_INVOICE_NUMBER',
-      'ground_customer_reference' => 'GROUND_CUSTOMER_REFERENCE',
-      'ground_po' => 'GROUND_PO',
-      'express_reference' => 'EXPRESS_REFERENCE',
-      'express_mps_master' => 'EXPRESS_MPS_MASTER',
-      'shipper_reference' => 'SHIPPER_REFERENCE',
+        'tracking_number' => 'TRACKING_NUMBER_OR_DOORTAG',
+        'door_tag' => 'TRACKING_NUMBER_OR_DOORTAG',
+        'rma' => 'RMA',
+        'ground_shipment_id' => 'GROUND_SHIPMENT_ID',
+        'ground_invoice_number' => 'GROUND_INVOICE_NUMBER',
+        'ground_customer_reference' => 'GROUND_CUSTOMER_REFERENCE',
+        'ground_po' => 'GROUND_PO',
+        'express_reference' => 'EXPRESS_REFERENCE',
+        'express_mps_master' => 'EXPRESS_MPS_MASTER',
+        'shipper_reference' => 'SHIPPER_REFERENCE',
     }
 
     TRANSIT_TIMES = %w(UNKNOWN ONE_DAY TWO_DAYS THREE_DAYS FOUR_DAYS FIVE_DAYS SIX_DAYS SEVEN_DAYS EIGHT_DAYS NINE_DAYS TEN_DAYS ELEVEN_DAYS TWELVE_DAYS THIRTEEN_DAYS FOURTEEN_DAYS FIFTEEN_DAYS SIXTEEN_DAYS SEVENTEEN_DAYS EIGHTEEN_DAYS)
@@ -101,37 +101,37 @@ module ActiveShipping
     # FedEx tracking codes as described in the FedEx Tracking Service WSDL Guide
     # All delays also have been marked as exceptions
     TRACKING_STATUS_CODES = HashWithIndifferentAccess.new(
-      'AA' => :at_airport,
-      'AD' => :at_delivery,
-      'AF' => :at_fedex_facility,
-      'AR' => :at_fedex_facility,
-      'AP' => :at_pickup,
-      'CA' => :canceled,
-      'CH' => :location_changed,
-      'DE' => :exception,
-      'DL' => :delivered,
-      'DP' => :departed_fedex_location,
-      'DR' => :vehicle_furnished_not_used,
-      'DS' => :vehicle_dispatched,
-      'DY' => :exception,
-      'EA' => :exception,
-      'ED' => :enroute_to_delivery,
-      'EO' => :enroute_to_origin_airport,
-      'EP' => :enroute_to_pickup,
-      'FD' => :at_fedex_destination,
-      'HL' => :held_at_location,
-      'IT' => :in_transit,
-      'LO' => :left_origin,
-      'OC' => :order_created,
-      'OD' => :out_for_delivery,
-      'PF' => :plane_in_flight,
-      'PL' => :plane_landed,
-      'PU' => :picked_up,
-      'RS' => :return_to_shipper,
-      'SE' => :exception,
-      'SF' => :at_sort_facility,
-      'SP' => :split_status,
-      'TR' => :transfer
+        'AA' => :at_airport,
+        'AD' => :at_delivery,
+        'AF' => :at_fedex_facility,
+        'AR' => :at_fedex_facility,
+        'AP' => :at_pickup,
+        'CA' => :canceled,
+        'CH' => :location_changed,
+        'DE' => :exception,
+        'DL' => :delivered,
+        'DP' => :departed_fedex_location,
+        'DR' => :vehicle_furnished_not_used,
+        'DS' => :vehicle_dispatched,
+        'DY' => :exception,
+        'EA' => :exception,
+        'ED' => :enroute_to_delivery,
+        'EO' => :enroute_to_origin_airport,
+        'EP' => :enroute_to_pickup,
+        'FD' => :at_fedex_destination,
+        'HL' => :held_at_location,
+        'IT' => :in_transit,
+        'LO' => :left_origin,
+        'OC' => :order_created,
+        'OD' => :out_for_delivery,
+        'PF' => :plane_in_flight,
+        'PL' => :plane_landed,
+        'PU' => :picked_up,
+        'RS' => :return_to_shipper,
+        'SE' => :exception,
+        'SF' => :at_sort_facility,
+        'SP' => :split_status,
+        'TR' => :transfer
     )
 
     DEFAULT_LABEL_STOCK_TYPE = 'PAPER_7X4.75'
@@ -156,7 +156,7 @@ module ActiveShipping
       packages = Array(packages)
 
       rate_request = build_rate_request(origin, destination, packages, options)
-
+      puts rate_request.to_s
       xml = commit(save_request(rate_request), (options[:test] || false))
 
       parse_rate_response(origin, destination, packages, xml, options)
@@ -318,6 +318,7 @@ module ActiveShipping
             unless freight
               # fedex api wants this up here otherwise request returns an error
               xml.DropoffType(options[:dropoff_type] || 'REGULAR_PICKUP')
+              xml.ServiceType(options[:service_type] || 'FEDEX_GROUND')
               xml.PackagingType(options[:packaging_type] || 'YOUR_PACKAGING')
             end
 
@@ -486,6 +487,8 @@ module ActiveShipping
         missing_xml_field = false
         rate_estimates = xml.root.css('> RateReplyDetails').map do |rated_shipment|
           begin
+            #GIOVACC
+            #puts rated_shipment.to_s
             service_code = rated_shipment.at('ServiceType').text
             is_saturday_delivery = rated_shipment.at('AppliedOptions').try(:text) == 'SATURDAY_DELIVERY'
             service_type = is_saturday_delivery ? "#{service_code}_SATURDAY_DELIVERY" : service_code
@@ -499,12 +502,12 @@ module ActiveShipping
             currency = rated_shipment.at('RatedShipmentDetails/ShipmentRateDetail/TotalNetCharge/Currency').text
 
             RateEstimate.new(origin, destination, @@name,
-                 self.class.service_name_for_code(service_type),
-                 :service_code => service_code,
-                 :total_price => rated_shipment.at('RatedShipmentDetails/ShipmentRateDetail/TotalNetCharge/Amount').text.to_f,
-                 :currency => currency,
-                 :packages => packages,
-                 :delivery_range => delivery_range)
+                             self.class.service_name_for_code(service_type),
+                             :service_code => service_code,
+                             :total_price => rated_shipment.at('RatedShipmentDetails/ShipmentRateDetail/TotalNetCharge/Amount').text.to_f,
+                             :currency => currency,
+                             :packages => packages,
+                             :delivery_range => delivery_range)
           rescue NoMethodError
             missing_xml_field = true
             nil
@@ -601,30 +604,30 @@ module ActiveShipping
 
         all_tracking_details = xml.root.xpath('CompletedTrackDetails/TrackDetails')
         tracking_details = case all_tracking_details.length
-          when 1
-            all_tracking_details.first
-          when 0
-            message = "The response did not contain tracking details"
-            return TrackingResponse.new(
-              false,
-              message,
-              Hash.from_xml(response),
-              carrier: @@name,
-              xml: response,
-              request: last_request
-            )
-          else
-            all_unique_identifiers = xml.root.xpath('CompletedTrackDetails/TrackDetails/TrackingNumberUniqueIdentifier').map(&:text)
-            message = "Multiple matches were found. Specify a unqiue identifier: #{all_unique_identifiers.join(', ')}"
-            return TrackingResponse.new(
-              false,
-              message,
-              Hash.from_xml(response),
-              carrier: @@name,
-              xml: response,
-              request: last_request
-            )
-        end
+                           when 1
+                             all_tracking_details.first
+                           when 0
+                             message = "The response did not contain tracking details"
+                             return TrackingResponse.new(
+                                 false,
+                                 message,
+                                 Hash.from_xml(response),
+                                 carrier: @@name,
+                                 xml: response,
+                                 request: last_request
+                             )
+                           else
+                             all_unique_identifiers = xml.root.xpath('CompletedTrackDetails/TrackDetails/TrackingNumberUniqueIdentifier').map(&:text)
+                             message = "Multiple matches were found. Specify a unqiue identifier: #{all_unique_identifiers.join(', ')}"
+                             return TrackingResponse.new(
+                                 false,
+                                 message,
+                                 Hash.from_xml(response),
+                                 carrier: @@name,
+                                 xml: response,
+                                 request: last_request
+                             )
+                           end
 
         first_notification = tracking_details.at('Notification')
         severity = first_notification.at('Severity').text
@@ -655,12 +658,12 @@ module ActiveShipping
         end
 
         origin = if origin_node = tracking_details.at('OriginLocationAddress')
-          Location.new(
-            country: origin_node.at('CountryCode').text,
-            province: origin_node.at('StateOrProvinceCode').text,
-            city: origin_node.at('City').text
-          )
-        end
+                   Location.new(
+                       country: origin_node.at('CountryCode').text,
+                       province: origin_node.at('StateOrProvinceCode').text,
+                       city: origin_node.at('City').text
+                   )
+                 end
 
         destination = extract_address(tracking_details, DELIVERY_ADDRESS_NODE_NAMES)
         shipper_address = extract_address(tracking_details, SHIPPER_ADDRESS_NODE_NAMES)
@@ -692,24 +695,24 @@ module ActiveShipping
       end
 
       TrackingResponse.new(
-        success,
-        message,
-        Hash.from_xml(response),
-        carrier: @@name,
-        xml: response,
-        request: last_request,
-        status: status,
-        status_code: status_code,
-        status_description: status_description,
-        ship_time: ship_time,
-        scheduled_delivery_date: scheduled_delivery_time,
-        actual_delivery_date: actual_delivery_time,
-        delivery_signature: delivery_signature,
-        shipment_events: shipment_events,
-        shipper_address: (shipper_address.nil? || shipper_address.unknown?) ? nil : shipper_address,
-        origin: origin,
-        destination: destination,
-        tracking_number: tracking_number
+          success,
+          message,
+          Hash.from_xml(response),
+          carrier: @@name,
+          xml: response,
+          request: last_request,
+          status: status,
+          status_code: status_code,
+          status_description: status_description,
+          ship_time: ship_time,
+          scheduled_delivery_date: scheduled_delivery_time,
+          actual_delivery_date: actual_delivery_time,
+          delivery_signature: delivery_signature,
+          shipment_events: shipment_events,
+          shipper_address: (shipper_address.nil? || shipper_address.unknown?) ? nil : shipper_address,
+          origin: origin,
+          destination: destination,
+          tracking_number: tracking_number
       )
     end
 
@@ -759,8 +762,8 @@ module ActiveShipping
 
       if node
         args[:country] =
-          node.at('CountryCode').try(:text) ||
-          ActiveUtils::Country.new(:alpha2 => 'ZZ', :name => 'Unknown or Invalid Territory', :alpha3 => 'ZZZ', :numeric => '999')
+            node.at('CountryCode').try(:text) ||
+                ActiveUtils::Country.new(:alpha2 => 'ZZ', :name => 'Unknown or Invalid Territory', :alpha3 => 'ZZZ', :numeric => '999')
 
         args[:province] = node.at('StateOrProvinceCode').try(:text) || 'unknown'
         args[:city] = node.at('City').try(:text) || 'unknown'
