@@ -175,6 +175,8 @@ module ActiveShipping
     def create_shipment(origin, destination, packages, options = {})
       options = @options.merge(options)
       packages = Array(packages)
+
+      #https://stackoverflow.com/questions/14040137/fedex-api-shipping-label-multiple-package-shipments
       raise Error, "Multiple packages are not supported yet." if packages.length > 1
 
       request = build_shipment_request(origin, destination, packages, options)
@@ -235,7 +237,11 @@ module ActiveShipping
             xml.PackageCount(packages.size)
             packages.each do |package|
               xml.RequestedPackageLineItems do
-                xml.GroupPackageCount(1)
+                puts "group_package_count: #{options[:group_package_count]}, master_tracking_id: #{options[:master_tracking_id]}"
+                xml.GroupPackageCount(options[:group_package_count] || 1)
+                if (options[:master_tracking_id])
+                  xml.MasterTrackingID(options[:master_tracking_id])
+                end
                 build_package_weight_node(xml, package, imperial)
                 build_package_dimensions_node(xml, package, imperial)
 
